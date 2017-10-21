@@ -10,7 +10,7 @@
 }
 
 :root {
-  --base-font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  --base-font-family: 'Open Sans',sans-serif;
   --strong-font-family: ZillaSlab,Georgia,Utopia,Charter,serif;
   --base-font-size: 15px;
   --header-height: 5rem;
@@ -283,7 +283,6 @@ input:invalid {
   left: 0;
 }
 
-.delete-box,
 .play-box {
   background-color: var(--color-listen);
 }
@@ -326,7 +325,24 @@ body.mobile-safari .play-box:active {
 }
 
 .delete-box {
+  background-color: white;
   margin-left: var(--standard-margin);
+  border: 1px solid black;
+}
+
+body:not(.mobile-safari) .delete-box:hover,
+body.mobile-safari .delete-box:active {
+  background-color: black;
+  color: white;
+}
+
+.play-box {
+  border: 1px solid var(--color-listen);
+}
+
+body:not(.mobile-safari) .play-box:hover,
+body.mobile-safari .play-box:active {
+  border-color: var(--color-listen-dark);
 }
 
 .vote-box {
@@ -1345,7 +1361,7 @@ body:not(.mobile-safari) .robot .bubble:hover {
 }
 
 #voice-record {
-  overflow-x: hidden;
+  overflow: hidden;
   padding: 0 0.5rem;
 }
 
